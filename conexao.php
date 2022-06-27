@@ -1,15 +1,15 @@
 <?php include("cabecalho.php"); ?>
     <?php
     $nome = $_GET["nome"];
-    $preco = $_GET["email"];
+    $email = $_GET["email"];
     
     function insereProduto($conexao, $nome, $email) {
-        $query = "insert into form (nome, email) values ('{$nome}', {$email})";
+        $query = "insert into form (nome, email) values ('{$nome}', '{$email}')";
         $resultadoDaInsercao = mysqli_query($conexao, $query);
         return $resultadoDaInsercao;
     }
 
-    $conexao = mysqli_connect('localhost', 'root', '', 'form');
+    $conexao = mysqli_connect('localhost', 'root', '', 'testephp');
 
     if(insereProduto($conexao, $nome, $email)) {
     ?>

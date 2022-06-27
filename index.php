@@ -1,5 +1,5 @@
 <?php include("cabecalho.php"); ?>
 
-    <h1>Seja Bem vindo!</h1>
+    <h1>Pag. de teste</h1>
 
 <?php include("rodape.php"); ?>

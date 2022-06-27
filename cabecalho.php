@@ -23,7 +23,7 @@
                 </div>
                 <div>
                     <ul class="nav navbar-nav">
-                        <li><a href="conexao.php">Adiciona Produto</a></li>
+                        <li><a href="form.php">Adicionar cliente</a></li>
                         <li><a href="sobre.php">Sobre</a></li>
                     </ul>
                 </div>
