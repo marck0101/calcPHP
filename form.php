@@ -1,20 +1,26 @@
 <?php include("cabecalho.php"); ?>
     
     <h1>Formulário de Cadastro</h1>
-    <form action="conexao.php">
+    <!-- <form action="conexao.php"> -->
+    <!-- <form action=""> -->
         <table class="table">
-            <tr>
-                <td>Nome</td>
-                <td><input type="text" name="nome" /></td>
-            </tr>
-            <tr>
-                <td>Email</td>
-                <td><input type="text" name="email" /></td>
-            </tr>
-            <tr>
-                <td><input type="submit" value="Cadastrar" /></td>
-            </tr>
+
+            <?php include("cep.php");?>
+            <?php include("tipoInstalacao.php");?>
+            <?php include("onOfGrid.php");?>
+            <?php include("gastoMensal.php");?>
+            <?php include("tarifa.php");?>
+            <?php include("formContato.php");?>
+
         </table>
-    </form>
+        <a  href="#teste">
+            <button class="btn btn-danger btn-lg btn-block"  onclick="maeFunction() ">
+            Simule Agora</button>
+        </a>
+    <!-- </form> -->
+
+    <div class="row space">
+        <div class='' id="resultado2" name="resultado2">
+    </div>
 
 <?php include("rodape.php"); ?>
