@@ -3,7 +3,7 @@
 <div>
     <label>Nome Completo</label>
     <input type="text" name="nomeCompleto" id="nomeCompleto" class="form-control "
-        placeholder="Nome e Sobrenome" value="Nome e Sobrenome"><br>
+        placeholder="Nome e Sobrenome" maxlength="50" value="Nome e Sobrenome"><br>
 </div>
 
 <div>
@@ -16,7 +16,7 @@
 <div>
     <label>E-MAIL</label><br>
     <input type="email" name="email" id="email" class="form-control "
-        placeholder="nome@email.com" value="nome@email.com"><br>
+        placeholder="nome@email.com" maxlength="50" value="nome@email.com"><br>
 </div>
 
 </div>
