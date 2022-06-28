@@ -30,5 +30,6 @@
             </div><!-- container acaba aqui -->
         </div>
     <div>
+
+    <!-- <form action="conectTodasVar.php"> -->
     
-<?php include("rodape.php"); ?>

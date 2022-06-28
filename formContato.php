@@ -2,13 +2,13 @@
 <h5>Informações para contato</h5>
 <div>
     <label>Nome Completo</label>
-    <input type="text" name="name" id="nomeCompleto" class="form-control "
+    <input type="text" name="nomeCompleto" id="nomeCompleto" class="form-control "
         placeholder="Nome e Sobrenome" value="Nome e Sobrenome"><br>
 </div>
 
 <div>
     <label>Telefone de contato</label>
-    <input type="text" name="message" id="telefoneContato" class="form-control "
+    <input type="text" name="telefoneContato" id="telefoneContato" class="form-control "
         placeholder="(55) 9 0000-0000" value="(55) 9 0000-0000" placeholder="(55) 9 9999-9999"
         maxlength="15"><br>
 </div>
