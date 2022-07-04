@@ -197,7 +197,7 @@ function exibeGrid(cm, potenciaPico, areaSistema, geracaoMes, geracaoAno) {
 
   <div class="teste-item1">
     <div class="tamanho-icon">
-      <img src="icons/lampada.png"/>
+      <img src="../icons/lampada.png"/>
     </div>
 
     <div class="alinhamento">
@@ -208,14 +208,14 @@ function exibeGrid(cm, potenciaPico, areaSistema, geracaoMes, geracaoAno) {
   </div>
 
   <div class="teste-item1">
-    <img src="icons/potencia.png"/>
+    <img src="../icons/potencia.png"/>
       <div class="alinhamento">
         <h5 class="texto">Potência Pico: ${potenciaPico.toFixed(2)} kWp</h5>
       </div>
   </div>
 
   <div class="teste-item1">
-    <img src="icons/placa.png"/>
+    <img src="../icons/placa.png"/>
       <div class="alinhamento">
         <h5 class="texto">Consumo mensal médio considerado: ${areaSistema.toFixed(
           2
@@ -224,7 +224,7 @@ function exibeGrid(cm, potenciaPico, areaSistema, geracaoMes, geracaoAno) {
   </div>
 
   <div class="teste-item1"> <a id='teste'></a>
-    <img src="icons/area.png"/>
+    <img src="../icons/area.png"/>
       <div class="alinhamento">
         <h5 class="texto">Consumo mensal médio considerado: ${geracaoMes.toFixed(
           2
@@ -233,7 +233,7 @@ function exibeGrid(cm, potenciaPico, areaSistema, geracaoMes, geracaoAno) {
   </div>
 
   <div class="teste-item1">
-    <img src="icons/ano.png"/><div class="alinhamento">
+    <img src="../icons/ano.png"/><div class="alinhamento">
     <h5 class="texto">Consumo mensal médio considerado: ${geracaoAno.toFixed(
       2
     )} kWh<h5/>
