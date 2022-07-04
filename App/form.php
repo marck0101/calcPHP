@@ -5,12 +5,12 @@
         <!-- <form action=""> -->
             <table class="table">
 
-                <?php include("cep.php");?>
-                <?php include("tipoInstalacao.php");?>
-                <?php include("onOfGrid.php");?>
-                <?php include("gastoMensal.php");?>
-                <?php include("tarifa.php");?>
-                <?php include("formContato.php");?>
+                <?php include("../corpo/cep.php");?>
+                <?php include("../corpo/tipoInstalacao.php");?>
+                <?php include("../corpo/onOfGrid.php");?>
+                <?php include("../corpo/gastoMensal.php");?>
+                <?php include("../corpo/tarifa.php");?>
+                <?php include("../corpo/formContato.php");?>
 
             </table>
             <a  href="#teste">
