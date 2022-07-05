@@ -34,6 +34,9 @@ function getCEP() {
  * @param {*} telefoneContato 
  * @param {*} email 
  */
+
+var cepTeste;
+
 function captApresenta(
   cep,
   localidade,
@@ -45,6 +48,8 @@ function captApresenta(
   telefoneContato,
   email
 ) {
+  cepTeste = document.getElementById("cep").value;
+ 
   var cep = document.getElementById("cep").value;
   // var localidade = document.getElementById("localidade").value;
   var redeEletrica = document.getElementById("redeEletrica").value; // como saber se é sim ou n o selecionado
@@ -299,26 +304,27 @@ function maeFunction() {
   exibeGrid(cm, potenciaPico, areaSistema, geracaoMes, geracaoAno);
 }
 
+
 /**
  * Envia dados para o PHP
  * @var json Variável que armazena os dados para enviar para o arquivo php
  * @var xhttp Cria a instância para comunicar com o arquivo php
  */
-function enviaRequest() {
+// function enviaRequest() {
 
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) { //Verifica se comunicou com o php
-      alert('Entrou na função enviaRequest()');
-      console.log(this.responseText);
-      alert(this.responseText); // é o que o arquivo php retornou de mensagem
-     // document.getElementById("demo").innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("POST", "../src/js/arquivo.php?teste=1500", true); // Abre uma instância com o arquivo php
-  //xhttp.open("POST", "../src/js/arquivo.php?cep=" + cep + "&localidade=" + localidade, true);
-  xhttp.send(null);
-}
+//   var xhttp = new XMLHttpRequest();
+//   xhttp.onreadystatechange = function() {
+//     if (this.readyState == 4 && this.status == 200) { //Verifica se comunicou com o php
+//       alert('Entrou na função enviaRequest()');
+//       console.log(this.responseText);
+//       alert(this.responseText); // é o que o arquivo php retornou de mensagem
+//      // document.getElementById("demo").innerHTML = this.responseText;
+//     }
+//   };
+//   xhttp.open("POST", "../src/js/arquivo.php?teste=1500", true); // Abre uma instância com o arquivo php
+//   //xhttp.open("POST", "../src/js/arquivo.php?cep=" + cep + "&localidade=" + localidade, true);
+//   xhttp.send(null);
+// }
 
 /** 
  * exemplo vídeo aula 
@@ -341,3 +347,12 @@ xhr.open("GET", "" )
 xhr.send();
 
 */
+
+function enviaRequest() {
+
+var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
+var theUrl = "/calculadoraPHP/src/js/arquivo.php";
+xmlhttp.open("POST", theUrl);
+xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+xmlhttp.send(JSON.stringify({cep: cepTeste }));
+}
