@@ -310,6 +310,7 @@ function enviaRequest() {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) { //Verifica se comunicou com o php
       alert('Entrou na função enviaRequest()');
+      console.log(this.responseText);
       alert(this.responseText); // é o que o arquivo php retornou de mensagem
      // document.getElementById("demo").innerHTML = this.responseText;
     }
@@ -318,3 +319,25 @@ function enviaRequest() {
   //xhttp.open("POST", "../src/js/arquivo.php?cep=" + cep + "&localidade=" + localidade, true);
   xhttp.send(null);
 }
+
+/** 
+ * exemplo vídeo aula 
+ * https://www.youtube.com/watch?v=bpx0r_PLLBo
+var xhr =new XMLHttpRequest();
+xhr.onreadystatechange = function(){
+  var documento;
+
+  if(xhr.readyState == 4 && xhr.status ==200){
+   documento = xhr.response;
+   documento = JSON.parse(documento)
+   console.log(documento);
+  }else{
+
+  }
+}
+
+xhr.open("GET", "" )
+
+xhr.send();
+
+*/
