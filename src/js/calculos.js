@@ -36,24 +36,16 @@ function getCEP() {
  */
 
 var cepTeste;
+var localTeste;
 
-function captApresenta(
-  cep,
-  localidade,
-  redeEletrica,
-  local,
-  contaMes,
-  // kwpConsumo,
-  nomeCompleto,
-  telefoneContato,
-  email
-) {
+function captApresenta() {
   cepTeste = document.getElementById("cep").value;
  
   var cep = document.getElementById("cep").value;
   // var localidade = document.getElementById("localidade").value;
   var redeEletrica = document.getElementById("redeEletrica").value; // como saber se é sim ou n o selecionado
-  var local = document.getElementById("local").value;
+  localTeste = document.getElementById("local").value;
+  local = document.getElementById("local").value;
   var contaMes = document.getElementById("contaMes").value;
   var tarifa = document.getElementById("tarifa").value;
   // var kwpConsumo = document.getElementById("kwpConsumo").value;
@@ -307,8 +299,8 @@ function maeFunction() {
 
 /**
  * Envia dados para o PHP
- * @var json Variável que armazena os dados para enviar para o arquivo php
- * @var xhttp Cria a instância para comunicar com o arquivo php
+ *  json Variável que armazena os dados para enviar para o arquivo php
+ *  xhttp Cria a instância para comunicar com o arquivo php
  */
 // function enviaRequest() {
 
@@ -354,5 +346,5 @@ var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
 var theUrl = "/calculadoraPHP/src/js/arquivo.php";
 xmlhttp.open("POST", theUrl);
 xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-xmlhttp.send(JSON.stringify({cep: cepTeste }));
+xmlhttp.send(JSON.stringify({cep: cepTeste, local: localTeste }));
 }
