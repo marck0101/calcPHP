@@ -1,3 +1,4 @@
+
 function getCEP() {
   var cep = document.getElementById("cep").value;
   if (cep.length > 7) {
@@ -21,6 +22,18 @@ function getCEP() {
   return localidade;
 }
 
+/**
+ * Pega os campos de entrada da tela
+ * e trazer para javascript
+ * @param {*} cep 
+ * @param {*} localidade 
+ * @param {*} redeEletrica 
+ * @param {*} local 
+ * @param {*} contaMes 
+ * @param {*} nomeCompleto 
+ * @param {*} telefoneContato 
+ * @param {*} email 
+ */
 function captApresenta(
   cep,
   localidade,
@@ -284,4 +297,24 @@ function maeFunction() {
 
   //exibe grid, mas para isso precisa => ()
   exibeGrid(cm, potenciaPico, areaSistema, geracaoMes, geracaoAno);
+}
+
+/**
+ * Envia dados para o PHP
+ * @var json Variável que armazena os dados para enviar para o arquivo php
+ * @var xhttp Cria a instância para comunicar com o arquivo php
+ */
+function enviaRequest() {
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) { //Verifica se comunicou com o php
+      alert('Entrou na função enviaRequest()');
+      alert(this.responseText); // é o que o arquivo php retornou de mensagem
+     // document.getElementById("demo").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("POST", "../src/js/arquivo.php?teste=1500", true); // Abre uma instância com o arquivo php
+  //xhttp.open("POST", "../src/js/arquivo.php?cep=" + cep + "&localidade=" + localidade, true);
+  xhttp.send(null);
 }

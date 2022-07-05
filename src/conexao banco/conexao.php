@@ -9,7 +9,7 @@
         return $resultadoDaInsercao;
     }
 
-    $conexao = mysqli_connect('localhost', 'root', '', 'testephp');
+    $conexao = mysqli_connect('localhost', 'root', 'testephp', '');
 
     if(insereProduto($conexao, $nome, $email)) {
     ?>
