@@ -17,7 +17,7 @@
         <div class="borda">
             <table>
 
-            <form action="../component/App/ApresentaDados/ApresentaDados.php" method="post">
+            <!-- <form action="../component/App/ApresentaDados/ApresentaDados.php" method="post"> -->
             
                     <?php  include("../component/App/conteudo/cep.php")?>
                     <?php  include("../component/App/conteudo/tipoInstalacao.php")?>
@@ -26,11 +26,11 @@
                     <?php  include("../component/App/conteudo/tarifa.php")?>
                     <?php  include("../component/App/conteudo/formContato.php")?>
                 
-                    <div class='' id="variables" name="variables"></div>
-                    <input type='hidden' name='endereco' value='enderecoFixo'/>
+                    <!-- <div class='' id="variables" name="variables"></div>
+                    <input type='hidden' name='endereco' value='enderecoFixo'/> -->
                     <button class="btn btn-danger btn-lg btn-block"  onclick="maeFunction() ">
                     Simule Agora</button>
-                </form>                
+                <!-- </form>                 -->
 
             </table>
 

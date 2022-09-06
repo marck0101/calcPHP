@@ -38,6 +38,18 @@ function getCEP() {
 var cepTeste;
 var localTeste;
 
+const telefoneContato1 = document.getElementById("telefoneContato").value;
+
+// function captura(){
+// const nomeCompleto1 = document.getElementById("nomeCompleto").value;
+// const telefoneContato1 = document.getElementById("telefoneContato").value;
+// const email1 = document.getElementById("email").value;
+// // console.log('nomeCompleto =>', nomeCompleto);
+// // console.log('telefoneContato =>', telefoneContato);
+// // console.log('email =>', email);
+
+// }
+
 function captApresenta() {
   cepTeste = document.getElementById("cep").value;
  
@@ -49,9 +61,9 @@ function captApresenta() {
   var contaMes = document.getElementById("contaMes").value;
   var tarifa = document.getElementById("tarifa").value;
   // var kwpConsumo = document.getElementById("kwpConsumo").value;
-  var nomeCompleto = document.getElementById("nomeCompleto").value;
-  var telefoneContato = document.getElementById("telefoneContato").value;
-  var email = document.getElementById("email").value;
+  const nomeCompleto = document.getElementById("nomeCompleto").value;
+  const telefoneContato = document.getElementById("telefoneContato").value;
+  const email = document.getElementById("email").value;
 
   if (cep.length > 7) {
     // console.log("o cep é " + cep)
@@ -232,18 +244,14 @@ function exibeGrid(cm, potenciaPico, areaSistema, geracaoMes, geracaoAno) {
   <div class="teste-item1">
     <img src="../icons/placa.png"/>
       <div class="alinhamento">
-        <h5 class="texto">Consumo mensal médio considerado: ${areaSistema.toFixed(
-          2
-        )} m²<h5/>
+        <h5 class="texto">Consumo mensal médio considerado: ${areaSistema.toFixed(2)} m²<h5/>
       </div>
   </div>
 
   <div class="teste-item1"> <a id='teste'></a>
     <img src="../icons/area.png"/>
       <div class="alinhamento">
-        <h5 class="texto">Consumo mensal médio considerado: ${geracaoMes.toFixed(
-          2
-        )} kWh<h5/>
+        <h5 class="texto">Consumo mensal médio considerado: ${geracaoMes.toFixed(2)} kWh<h5/>
       </div>
   </div>
 
@@ -261,17 +269,17 @@ function exibeGrid(cm, potenciaPico, areaSistema, geracaoMes, geracaoAno) {
   document.getElementById("resultado2").innerHTML = exibe;
 }
 
-function submitBanco() {}
+// function submitBanco() {}
 
 function maeFunction() {
   console.log("entrou na funcao maeFunction");
   //vai retornar a localidade e armazenar na variavel endereco
   var endereco = getCEP();
 
-  document.getElementById("variables").innerHTML = `
-  <input type='hidden' name='endereco' value='${endereco}'/>
-  <label>${endereco}</label>
-  `;
+  // document.getElementById("variables").innerHTML = `
+  // <input type='hidden' name='endereco' value='${endereco}'/>
+  // <label>${endereco}</label>
+  // `;
 
   //vai usar a variavel de endereco para procurar o nivel de irradiacao
   var indIrrad = irradJson(endereco);
@@ -291,6 +299,7 @@ function maeFunction() {
   //vai retornar geracaoMes, mas precisa de geracaoAno para calcular
   var geracaoMes = energiaGeradaMes(geracaoAno);
 
+
   captApresenta(
     cep,
     localidade,
@@ -304,9 +313,33 @@ function maeFunction() {
   );
 
   //exibe grid, mas para isso precisa => ()
-  exibeGrid(cm, potenciaPico, areaSistema, geracaoMes, geracaoAno);
+  // exibeGrid(cm, potenciaPico, areaSistema, geracaoMes, geracaoAno);
+
+  // console.log('==>',nomeCompleto,telefoneContato,email)
+  // console.log('nomeCompleto =>', nomeCompleto1)
+  // console.log('telefoneContato =>', telefoneContato1)
+  // console.log('email =>', email1)
+
+  const nomeCompleto1 = document.getElementById("nomeCompleto").value;
+  const telefoneContato1 = document.getElementById("telefoneContato").value;
+  const email1 = document.getElementById("email").value;
+
+  window.location.href=`../component/App/ApresentaDados/ApresentaDados.php?
+  endereco=${endereco}&
+  indIrrad=${indIrrad}&
+  cm=${cm}&
+  potenciaPico=${potenciaPico.toFixed(2)}&
+  areaSistema=${areaSistema.toFixed(2)}&
+  geracaoAno=${geracaoAno.toFixed(2)}&
+  geracaoMes=${geracaoMes.toFixed(2)}&
+  nomeCompleto=${nomeCompleto1}&
+  telefoneContato=${telefoneContato1}&
+  email=${email1}
+  `
 }
 
+
+// ../ApresentaDados/ApresentaDados.php?endereco=${endereco}&varteste2=${testesss}
 
 /**
  * Envia dados para o PHP

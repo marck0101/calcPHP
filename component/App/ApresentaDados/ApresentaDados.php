@@ -1,6 +1,16 @@
 <?php
 	//recebemos nosso parâmetro vindo do form
-	$endereco = isset($_POST['endereco']) ? $_POST['endereco'] : null;
+	$endereco = isset($_GET['endereco']) ? $_GET['endereco'] : null;
+	$indIrrad = isset($_GET['indIrrad']) ? $_GET['indIrrad'] : null;
+	$cm = isset($_GET['cm']) ? $_GET['cm'] : null;
+	$potenciaPico = isset($_GET['potenciaPico']) ? $_GET['potenciaPico'] : null;
+	$areaSistema = isset($_GET['areaSistema']) ? $_GET['areaSistema'] : null;
+	$geracaoAno = isset($_GET['geracaoAno']) ? $_GET['geracaoAno'] : null;
+	$geracaoMes = isset($_GET['geracaoMes']) ? $_GET['geracaoMes'] : null;
+	$nomeCompleto = isset($_GET['nomeCompleto']) ? $_GET['nomeCompleto'] : null;
+	$telefoneContato = isset($_GET['telefoneContato']) ? $_GET['telefoneContato'] : null;
+	$email = isset($_GET['email']) ? $_GET['email'] : null;
+
     echo $endereco;
 ?>
 
@@ -13,12 +23,29 @@
     <title>Document</title>
 </head>
 <body>
-
-    <?php 
-        echo 'endereco aqui =>' . $endereco;
-        echo '<br>';
-        echo 'teste';
-    ?>
-
+    <div>
+        <?php 
+            echo 'endereco =>' . $endereco;
+            echo '<br>';
+            echo 'indIrrad=>' . $indIrrad;
+            echo '<br>';
+            echo 'cm=>' . $cm;
+            echo '<br>';
+            echo 'potenciaPico=>' . $potenciaPico;
+            echo '<br>';
+            echo 'areaSistema=>' . $areaSistema;
+            echo '<br>';
+            echo 'geracaoAno=>' . $geracaoAno;
+            echo '<br>';
+            echo 'geracaoMes=>' . $geracaoMes;
+            echo '<br>';
+            echo 'nomeCompleto=>' . $nomeCompleto;
+            echo '<br>';
+            echo 'telefoneContato=>' . $telefoneContato;
+            echo '<br>';
+            echo 'email=>' . $email;
+        ?>
+        
+    </div>
 </body>
 </html>
