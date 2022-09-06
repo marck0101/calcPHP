@@ -38,17 +38,6 @@ function getCEP() {
 var cepTeste;
 var localTeste;
 
-const telefoneContato1 = document.getElementById("telefoneContato").value;
-
-// function captura(){
-// const nomeCompleto1 = document.getElementById("nomeCompleto").value;
-// const telefoneContato1 = document.getElementById("telefoneContato").value;
-// const email1 = document.getElementById("email").value;
-// // console.log('nomeCompleto =>', nomeCompleto);
-// // console.log('telefoneContato =>', telefoneContato);
-// // console.log('email =>', email);
-
-// }
 
 function captApresenta() {
   cepTeste = document.getElementById("cep").value;
@@ -68,10 +57,6 @@ function captApresenta() {
   if (cep.length > 7) {
     // console.log("o cep é " + cep)
   }
-
-  //  if(localidade === retorno.localidade){
-  //      console.log("A localidade é "+ retorno.localidade)
-  // }
 
   if (redeEletrica === "sim") {
     console.log("tem rede elétrica");
@@ -110,8 +95,6 @@ function getLocalidade() {
   var endereco = document.getElementById("localidade").value;
   return endereco;
 }
-
-// console.log("Nome do possível Cliente: " + email)
 
 function irradJson(endereco) {
   console.log("entrou na funcao irradJson");
@@ -218,56 +201,56 @@ function energiaGeradaMes(geracaoAno) {
   return geracaoMes;
 }
 
-function exibeGrid(cm, potenciaPico, areaSistema, geracaoMes, geracaoAno) {
-  exibe =
-    `<div class="borda">
+// function exibeGrid(cm, potenciaPico, areaSistema, geracaoMes, geracaoAno) {
+//   exibe =
+//     `<div class="borda">
 
-  <div class="teste-item1">
-    <div class="tamanho-icon">
-      <img src="../icons/lampada.png"/>
-    </div>
+//   <div class="teste-item1">
+//     <div class="tamanho-icon">
+//       <img src="../icons/lampada.png"/>
+//     </div>
 
-    <div class="alinhamento">
-      <h5 class="texto">Consumo mensal médio considerado: ${cm.toFixed(
-        2
-      )} kWh<h5/>
-    </div>
-  </div>
+//     <div class="alinhamento">
+//       <h5 class="texto">Consumo mensal médio considerado: ${cm.toFixed(
+//         2
+//       )} kWh<h5/>
+//     </div>
+//   </div>
 
-  <div class="teste-item1">
-    <img src="../icons/potencia.png"/>
-      <div class="alinhamento">
-        <h5 class="texto">Potência Pico: ${potenciaPico.toFixed(2)} kWp</h5>
-      </div>
-  </div>
+//   <div class="teste-item1">
+//     <img src="../icons/potencia.png"/>
+//       <div class="alinhamento">
+//         <h5 class="texto">Potência Pico: ${potenciaPico.toFixed(2)} kWp</h5>
+//       </div>
+//   </div>
 
-  <div class="teste-item1">
-    <img src="../icons/placa.png"/>
-      <div class="alinhamento">
-        <h5 class="texto">Consumo mensal médio considerado: ${areaSistema.toFixed(2)} m²<h5/>
-      </div>
-  </div>
+//   <div class="teste-item1">
+//     <img src="../icons/placa.png"/>
+//       <div class="alinhamento">
+//         <h5 class="texto">Consumo mensal médio considerado: ${areaSistema.toFixed(2)} m²<h5/>
+//       </div>
+//   </div>
 
-  <div class="teste-item1"> <a id='teste'></a>
-    <img src="../icons/area.png"/>
-      <div class="alinhamento">
-        <h5 class="texto">Consumo mensal médio considerado: ${geracaoMes.toFixed(2)} kWh<h5/>
-      </div>
-  </div>
+//   <div class="teste-item1"> <a id='teste'></a>
+//     <img src="../icons/area.png"/>
+//       <div class="alinhamento">
+//         <h5 class="texto">Consumo mensal médio considerado: ${geracaoMes.toFixed(2)} kWh<h5/>
+//       </div>
+//   </div>
 
-  <div class="teste-item1">
-    <img src="../icons/ano.png"/><div class="alinhamento">
-    <h5 class="texto">Consumo mensal médio considerado: ${geracaoAno.toFixed(
-      2
-    )} kWh<h5/>
-  </div>
-  </div>
+//   <div class="teste-item1">
+//     <img src="../icons/ano.png"/><div class="alinhamento">
+//     <h5 class="texto">Consumo mensal médio considerado: ${geracaoAno.toFixed(
+//       2
+//     )} kWh<h5/>
+//   </div>
+//   </div>
 
-</div>  
-`;
+// </div>  
+// `;
 
-  document.getElementById("resultado2").innerHTML = exibe;
-}
+//   document.getElementById("resultado2").innerHTML = exibe;
+// }
 
 // function submitBanco() {}
 
@@ -276,22 +259,18 @@ function maeFunction() {
   //vai retornar a localidade e armazenar na variavel endereco
   var endereco = getCEP();
 
-  // document.getElementById("variables").innerHTML = `
-  // <input type='hidden' name='endereco' value='${endereco}'/>
-  // <label>${endereco}</label>
-  // `;
-
   //vai usar a variavel de endereco para procurar o nivel de irradiacao
   var indIrrad = irradJson(endereco);
+
   //consumoMensal está retornando algo que é armazenado dentro de cm
   var cm = consumoMensal();
+
   //pico sistema retorna um resultado que é armazenado dentro de potenciaPico
   var potenciaPico = picoSistema(indIrrad, cm);
   // console.log(areaEstimada(potenciaPico));
 
   // a area estimada precisa da potenciaPico para calcular
   var areaSistema = areaEstimada(potenciaPico);
-
   // var areaSistema = areaEstimada();
 
   //aqui retorna geração ano, e para calcular é preciso de indIrrad, potenciaPico
@@ -312,14 +291,6 @@ function maeFunction() {
     email
   );
 
-  //exibe grid, mas para isso precisa => ()
-  // exibeGrid(cm, potenciaPico, areaSistema, geracaoMes, geracaoAno);
-
-  // console.log('==>',nomeCompleto,telefoneContato,email)
-  // console.log('nomeCompleto =>', nomeCompleto1)
-  // console.log('telefoneContato =>', telefoneContato1)
-  // console.log('email =>', email1)
-
   const nomeCompleto1 = document.getElementById("nomeCompleto").value;
   const telefoneContato1 = document.getElementById("telefoneContato").value;
   const email1 = document.getElementById("email").value;
@@ -338,57 +309,3 @@ function maeFunction() {
   `
 }
 
-
-// ../ApresentaDados/ApresentaDados.php?endereco=${endereco}&varteste2=${testesss}
-
-/**
- * Envia dados para o PHP
- *  json Variável que armazena os dados para enviar para o arquivo php
- *  xhttp Cria a instância para comunicar com o arquivo php
- */
-// function enviaRequest() {
-
-//   var xhttp = new XMLHttpRequest();
-//   xhttp.onreadystatechange = function() {
-//     if (this.readyState == 4 && this.status == 200) { //Verifica se comunicou com o php
-//       alert('Entrou na função enviaRequest()');
-//       console.log(this.responseText);
-//       alert(this.responseText); // é o que o arquivo php retornou de mensagem
-//      // document.getElementById("demo").innerHTML = this.responseText;
-//     }
-//   };
-//   xhttp.open("POST", "../src/js/arquivo.php?teste=1500", true); // Abre uma instância com o arquivo php
-//   //xhttp.open("POST", "../src/js/arquivo.php?cep=" + cep + "&localidade=" + localidade, true);
-//   xhttp.send(null);
-// }
-
-/** 
- * exemplo vídeo aula 
- * https://www.youtube.com/watch?v=bpx0r_PLLBo
-var xhr =new XMLHttpRequest();
-xhr.onreadystatechange = function(){
-  var documento;
-
-  if(xhr.readyState == 4 && xhr.status ==200){
-   documento = xhr.response;
-   documento = JSON.parse(documento)
-   console.log(documento);
-  }else{
-
-  }
-}
-
-xhr.open("GET", "" )
-
-xhr.send();
-
-*/
-
-function enviaRequest() {
-
-var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
-var theUrl = "/calculadoraPHP/src/js/arquivo.php";
-xmlhttp.open("POST", theUrl);
-xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-xmlhttp.send(JSON.stringify({cep: cepTeste, local: localTeste }));
-}

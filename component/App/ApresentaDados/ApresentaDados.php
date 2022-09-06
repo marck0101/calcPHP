@@ -11,7 +11,7 @@
 	$telefoneContato = isset($_GET['telefoneContato']) ? $_GET['telefoneContato'] : null;
 	$email = isset($_GET['email']) ? $_GET['email'] : null;
 
-    echo $endereco;
+    // echo $endereco;
 ?>
 
 <!DOCTYPE html>
@@ -20,10 +20,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../css/meuCss.css"></link>
     <title>Document</title>
 </head>
 <body>
-    <div>
+    <div class="borda">
         <?php 
             echo 'endereco =>' . $endereco;
             echo '<br>';
