@@ -11,17 +11,33 @@
     <title>Document</title>
 </head>
 <body>
-
+<!-- ../component/App/ApresentaDados/ApresentaDados.php -->
     <div>
         <?php  include("../component/App/cabecalho/cabecalho.php")?>
-        <div>
-            <?php  include("../component/App/conteudo/cep.php")?>
-            <?php  include("../component/App/conteudo/tipoInstalacao.php")?>
+        <div class="borda">
+            <table>
 
-            <?php  include("../component/App/conteudo/formContato.php")?>
-            <?php  include("../component/App/conteudo/gastoMensal.php")?>
-            <?php  include("../component/App/conteudo/onOffGrid.php")?>
-            <?php  include("../component/App/conteudo/tarifa.php")?>
+            <form action="../component/App/ApresentaDados/ApresentaDados.php" method="post">
+            
+                    <?php  include("../component/App/conteudo/cep.php")?>
+                    <?php  include("../component/App/conteudo/tipoInstalacao.php")?>
+                    <?php  include("../component/App/conteudo/onOffGrid.php")?>
+                    <?php  include("../component/App/conteudo/gastoMensal.php")?>
+                    <?php  include("../component/App/conteudo/tarifa.php")?>
+                    <?php  include("../component/App/conteudo/formContato.php")?>
+                
+                    <div class='' id="variables" name="variables"></div>
+                    <input type='hidden' name='endereco' value='enderecoFixo'/>
+                    <button class="btn btn-danger btn-lg btn-block"  onclick="maeFunction() ">
+                    Simule Agora</button>
+                </form>                
+
+            </table>
+
+            <!-- <div class="row space">
+                <div class='' id="resultado2" name="resultado2"></div>
+            </div> -->
+            
         </div>     
         <?php  include("../component/App/rodape/rodape.php")?>
     </div>

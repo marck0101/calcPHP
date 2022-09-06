@@ -177,18 +177,22 @@ function mascara(o, f) {
   v_fun = f;
   setTimeout("execmascara()", 1);
 }
+
 function execmascara() {
   v_obj.value = v_fun(v_obj.value);
 }
+
 function mtel(v) {
   v = v.replace(/\D/g, ""); //Remove tudo o que não é dígito
   v = v.replace(/^(\d{2})(\d)/g, "($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
   v = v.replace(/(\d)(\d{4})$/, "$1-$2"); //Coloca hífen entre o quarto e o quinto dígitos
   return v;
 }
+
 function id(el) {
   return document.getElementById(el);
 }
+
 window.onload = function () {
   id("telefoneContato").onkeyup = function () {
     mascara(this, mtel);
@@ -201,6 +205,7 @@ function energiaGeradaMes(geracaoAno) {
   console.log("A geracao de energia mensal é ", geracaoMes);
   return geracaoMes;
 }
+
 function exibeGrid(cm, potenciaPico, areaSistema, geracaoMes, geracaoAno) {
   exibe =
     `<div class="borda">
@@ -262,6 +267,12 @@ function maeFunction() {
   console.log("entrou na funcao maeFunction");
   //vai retornar a localidade e armazenar na variavel endereco
   var endereco = getCEP();
+
+  document.getElementById("variables").innerHTML = `
+  <input type='hidden' name='endereco' value='${endereco}'/>
+  <label>${endereco}</label>
+  `;
+
   //vai usar a variavel de endereco para procurar o nivel de irradiacao
   var indIrrad = irradJson(endereco);
   //consumoMensal está retornando algo que é armazenado dentro de cm
