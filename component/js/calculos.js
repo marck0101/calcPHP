@@ -291,6 +291,8 @@ function maeFunction() {
   const nomeCompleto1 = document.getElementById("nomeCompleto").value;
   const telefoneContato1 = document.getElementById("telefoneContato").value;
   const email1 = document.getElementById("email").value;
+  const tarifa1 = document.getElementById("tarifa").value;
+
 
   window.location.href = `../component/App/ApresentaDados/ApresentaDados.php?
   endereco=${endereco}&
@@ -303,7 +305,7 @@ function maeFunction() {
   nomeCompleto1=${nomeCompleto1}&
   telefoneContato1=${telefoneContato1}&
   email1=${email1}
-  tarifa=${tarifa}
+  tarifa1=${tarifa1}
 
   `;
   // Aqui no click fazer uma função que manda informações para o banco

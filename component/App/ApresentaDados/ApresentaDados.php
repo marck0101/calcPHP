@@ -41,7 +41,7 @@ function insereCliente(
     $nomeCompleto1,
     $telefoneContato1,
     $email1,
-    $tarifa
+    $tarifa1
 ) {
     $query = "insert into produtos (
     endereco, 
@@ -54,7 +54,7 @@ function insereCliente(
     nomeCompleto1, 
     telefoneContato1, 
     email1,
-    tarifa) 
+    tarifa1) 
     values 
     ('{$endereco}', 
     '{$indIrrad}', 
@@ -66,7 +66,7 @@ function insereCliente(
     '{$nomeCompleto1}', 
     '{$telefoneContato1}', 
     '{$email1}',
-    '{$tarifa}'
+    '{$tarifa1}'
     )";
     $resultadoDaInsercao = mysqli_query($conexao, $query);
     return $resultadoDaInsercao;
@@ -86,7 +86,7 @@ if (insereCliente(
     $nomeCompleto1,
     $telefoneContato1,
     $email1,
-    $tarifa
+    $tarifa1
 )) {
 ?>
     <p class=" text-success">
@@ -138,7 +138,7 @@ if (insereCliente(
         echo 'telefoneContato1=>' . $telefoneContato1;
         echo '<br>';
         echo 'email1=>' . $email1;
-        echo 'tarifa=>' . $tarifa;
+        echo 'tarifa1=>' . $tarifa1;
         ?>
     </div>
     <!-- </form> -->
