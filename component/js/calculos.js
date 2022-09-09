@@ -1,4 +1,3 @@
-
 function getCEP() {
   var cep = document.getElementById("cep").value;
   if (cep.length > 7) {
@@ -25,23 +24,22 @@ function getCEP() {
 /**
  * Pega os campos de entrada da tela
  * e trazer para javascript
- * @param {*} cep 
- * @param {*} localidade 
- * @param {*} redeEletrica 
- * @param {*} local 
- * @param {*} contaMes 
- * @param {*} nomeCompleto 
- * @param {*} telefoneContato 
- * @param {*} email 
+ * @param {*} cep
+ * @param {*} localidade
+ * @param {*} redeEletrica
+ * @param {*} local
+ * @param {*} contaMes
+ * @param {*} nomeCompleto
+ * @param {*} telefoneContato
+ * @param {*} email
  */
 
 var cepTeste;
 var localTeste;
 
-
 function captApresenta() {
   cepTeste = document.getElementById("cep").value;
- 
+
   var cep = document.getElementById("cep").value;
   // var localidade = document.getElementById("localidade").value;
   var redeEletrica = document.getElementById("redeEletrica").value; // como saber se é sim ou n o selecionado
@@ -246,7 +244,7 @@ function energiaGeradaMes(geracaoAno) {
 //   </div>
 //   </div>
 
-// </div>  
+// </div>
 // `;
 
 //   document.getElementById("resultado2").innerHTML = exibe;
@@ -278,7 +276,6 @@ function maeFunction() {
   //vai retornar geracaoMes, mas precisa de geracaoAno para calcular
   var geracaoMes = energiaGeradaMes(geracaoAno);
 
-
   captApresenta(
     cep,
     localidade,
@@ -295,7 +292,7 @@ function maeFunction() {
   const telefoneContato1 = document.getElementById("telefoneContato").value;
   const email1 = document.getElementById("email").value;
 
-  window.location.href=`../component/App/ApresentaDados/ApresentaDados.php?
+  window.location.href = `../component/App/ApresentaDados/ApresentaDados.php?
   endereco=${endereco}&
   indIrrad=${indIrrad}&
   cm=${cm}&
@@ -303,12 +300,11 @@ function maeFunction() {
   areaSistema=${areaSistema.toFixed(2)}&
   geracaoAno=${geracaoAno.toFixed(2)}&
   geracaoMes=${geracaoMes.toFixed(2)}&
-  nomeCompleto=${nomeCompleto1}&
-  telefoneContato=${telefoneContato1}&
-  email=${email1}
-  `
+  nomeCompleto1=${nomeCompleto1}&
+  telefoneContato1=${telefoneContato1}&
+  email1=${email1}
+  tarifa=${tarifa}
 
-// Aqui no click fazer uma função que manda informações para o banco
-
+  `;
+  // Aqui no click fazer uma função que manda informações para o banco
 }
-
