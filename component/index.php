@@ -1,45 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script language="javascript" type="text/javaScript" src="../component/js/calculos.js"></script>
     <script language="javascript" type="text/javaScript" src="../component/js/Testejson.js"></script>
-    <link rel="stylesheet" type="text/css" href="../src/estilo/meuCss.css"></link>
-    
+    <link rel="stylesheet" type="text/css" href="../src/estilo/meuCss.css">
+    </link>
+
     <title>Document</title>
 </head>
+
 <body>
-<!-- ../component/App/ApresentaDados/ApresentaDados.php -->
     <div>
-        <?php  include("../component/App/cabecalho/cabecalho.php")?>
+        <?php include("../component/App/cabecalho/cabecalho.php") ?>
         <div class="borda">
+            <!-- <form action="conectaBanco.php"> -->
             <table>
+                <?php include("../component/App/conteudo/cep.php") ?>
+                <?php include("../component/App/conteudo/tipoInstalacao.php") ?>
+                <?php include("../component/App/conteudo/onOffGrid.php") ?>
+                <?php include("../component/App/conteudo/gastoMensal.php") ?>
+                <?php include("../component/App/conteudo/tarifa.php") ?>
+                <?php include("../component/App/conteudo/formContato.php") ?>
 
-            <!-- <form action="../component/App/ApresentaDados/ApresentaDados.php" method="post"> -->
-            
-                    <?php  include("../component/App/conteudo/cep.php")?>
-                    <?php  include("../component/App/conteudo/tipoInstalacao.php")?>
-                    <?php  include("../component/App/conteudo/onOffGrid.php")?>
-                    <?php  include("../component/App/conteudo/gastoMensal.php")?>
-                    <?php  include("../component/App/conteudo/tarifa.php")?>
-                    <?php  include("../component/App/conteudo/formContato.php")?>
-                
-                    <!-- <div class='' id="variables" name="variables"></div>
-                    <input type='hidden' name='endereco' value='enderecoFixo'/> -->
-                    <button class="btn btn-danger btn-lg btn-block"  onclick="maeFunction() ">
+                <button class="btn btn-danger btn-lg btn-block" onclick="maeFunction() ">
                     Simule Agora</button>
-                <!-- </form>                 -->
-
             </table>
-
-            <!-- <div class="row space">
-                <div class='' id="resultado2" name="resultado2"></div>
-            </div> -->
-            
-        </div>     
-        <?php  include("../component/App/rodape/rodape.php")?>
+            <!-- </form> -->
+        </div>
+        <?php include("../component/App/rodape/rodape.php") ?>
     </div>
 </body>
+
 </html>

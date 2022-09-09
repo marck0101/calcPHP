@@ -307,5 +307,8 @@ function maeFunction() {
   telefoneContato=${telefoneContato1}&
   email=${email1}
   `
+
+// Aqui no click fazer uma função que manda informações para o banco
+
 }
 
