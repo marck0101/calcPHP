@@ -288,23 +288,28 @@ function maeFunction() {
     email
   );
 
+  const cep1 = document.getElementById("cep").value;
+  const redeEletrica1 = document.getElementById("redeEletrica").value;
+  const contaMes1 = document.getElementById("contaMes").value;
   const nomeCompleto1 = document.getElementById("nomeCompleto").value;
   const telefoneContato1 = document.getElementById("telefoneContato").value;
   const email1 = document.getElementById("email").value;
   const tarifa1 = document.getElementById("tarifa").value;
 
-
   window.location.href = `../component/App/ApresentaDados/ApresentaDados.php?
   endereco=${endereco}&
+  cep1=${cep1}&
+  contaMes1=${contaMes1}&
+  redeEletrica1=${redeEletrica1}&
   indIrrad=${indIrrad}&
-  cm=${cm}&
+  cm=${cm.toFixed(2)}&
   potenciaPico=${potenciaPico.toFixed(2)}&
   areaSistema=${areaSistema.toFixed(2)}&
   geracaoAno=${geracaoAno.toFixed(2)}&
   geracaoMes=${geracaoMes.toFixed(2)}&
   nomeCompleto1=${nomeCompleto1}&
   telefoneContato1=${telefoneContato1}&
-  email1=${email1}
+  email1=${email1}&
   tarifa1=${tarifa1}
 
   `;
