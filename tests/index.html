@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    #myDIVs {
+      height: 250px;
+      width: 400px;
+      padding: 10px;
+      margin: 15px;
+      color: black;
+      border: 5px solid white;
+      background-color: grey;
+    }
+  </style>
+
+  <body>
+    <h1>The Element Object</h1>
+    <h2>The offsetHeight and offsetWidth Properties</h2>
+
+    <div id="myDIVs">
+      <!-- texo setado manualmente -->
+      <b>Information about this div:</b><br />
+      aaaaaaaaaaaaaaaaa
+      <!-- Aqui recebe os JS -->
+      <p id="demo"></p>
+    </div>
+
+    <script>
+      // Aqui vai ser pego os estilos da myDIVs
+      const element = document.getElementById("myDIVs");
+      // Aqui vai ser colocado um texto junto com o hight
+      let text = "offsetHeight 1: " + element.offsetHeight + "px<br>";
+      // Aqui vai ser colocado um texto junto com o Width
+      text += "offsetWidth 2: " + element.offsetWidth + `px` + "<br>";
+      let Robson = text;
+      const teste = element.offsetHeight;
+      const teste2 = element.offsetWidth;
+      // Aqui vai colocar esses lets na tela
+      document.getElementById("demo").innerHTML = Robson;
+    </script>
+  </body>
+</html>

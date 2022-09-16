@@ -25,42 +25,112 @@ $tarifa1 = isset($_GET['tarifa1']) ? $_GET['tarifa1'] : null;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../css/meuCss.css">
+    <link rel="stylesheet" type="text/css" href="../../css/testeFlex.css" />
+
     </link>
     <title>Document</title>
 </head>
 
 <body>
     <div class="borda">
-        <?php
-        echo 'endereco =>' . $endereco;
-        echo '<br>';
-        echo 'cep =>' . $cep1;
-        echo '<br>';
-        echo 'contaMes =>' . $contaMes1;
-        echo '<br>';
-        echo 'redeEletrica =>' . $redeEletrica1;
-        echo '<br>';
-        echo 'indIrrad =>' . $indIrrad;
-        echo '<br>';
-        echo 'cm =>' . $cm;
-        echo '<br>';
-        echo 'potenciaPico =>' . $potenciaPico;
-        echo '<br>';
-        echo 'areaSistema =>' . $areaSistema;
-        echo '<br>';
-        echo 'geracaoAno =>' . $geracaoAno;
-        echo '<br>';
-        echo 'geracaoMes =>' . $geracaoMes;
-        echo '<br>';
-        echo 'nomeCompleto1 =>' . $nomeCompleto1;
-        echo '<br>';
-        echo 'telefoneContato1 =>' . $telefoneContato1;
-        echo '<br>';
-        echo 'email1 =>' . $email1;
-        echo '<br>';
-        echo 'tarifa1 =>' . $tarifa1;
+        <div class="container-teste">
+            <div class="teste-item1">
+                <?php
+                echo 'endereco =>' . $endereco;
+                ?>
+            </div>
 
-        ?>
+            <div class="teste-item2">
+                <?php
+                echo '<br>';
+                echo 'cep =>' . $cep1;
+                ?>
+            </div>
+
+            <div class="teste-item1">
+                <?php
+                echo '<br>';
+                echo 'contaMes =>' . $contaMes1;
+                ?>
+            </div>
+
+            <div class="teste-item2">
+                <?php
+                echo '<br>';
+                echo 'redeEletrica =>' . $redeEletrica1;
+                ?>
+            </div>
+
+            <div class="teste-item1">
+                <?php
+                echo '<br>';
+                echo 'indIrrad =>' . $indIrrad;
+                ?>
+            </div>
+
+            <div class="teste-item2">
+                <?php
+                echo '<br>';
+                echo 'cm =>' . $cm;
+                ?>
+            </div>
+
+            <div class="teste-item1">
+                <?php
+                echo '<br>';
+                echo 'potenciaPico =>' . $potenciaPico;
+                ?>
+            </div>
+
+            <div class="teste-item2">
+                <?php
+                echo '<br>';
+                echo 'areaSistema =>' . $areaSistema;
+                ?>
+            </div>
+
+            <div class="teste-item1">
+                <?php
+                echo '<br>';
+                echo 'geracaoAno =>' . $geracaoAno;
+                ?>
+            </div>
+
+            <div class="teste-item2">
+                <?php
+                echo '<br>';
+                echo 'geracaoMes =>' . $geracaoMes;
+                ?>
+            </div>
+
+            <div class="teste-item1">
+                <?php
+                echo '<br>';
+                echo 'nomeCompleto1 =>' . $nomeCompleto1;
+                ?>
+            </div>
+
+            <div class="teste-item2">
+                <?php
+                echo '<br>';
+                echo 'telefoneContato1 =>' . $telefoneContato1;
+                ?>
+            </div>
+
+            <div class="teste-item1">
+                <?php
+                echo '<br>';
+                echo 'email1 =>' . $email1;
+                ?>
+            </div>
+
+            <div class="teste-item2">
+                <?php
+                echo '<br>';
+                echo 'tarifa1 =>' . $tarifa1;
+                ?>
+            </div>
+        </div>
     </div>
 
 </body>
@@ -68,7 +138,6 @@ $tarifa1 = isset($_GET['tarifa1']) ? $_GET['tarifa1'] : null;
 </html>
 
 <?php
-
 function insereCliente(
     $conexao,
     $endereco,
@@ -233,6 +302,6 @@ if (insereCliente(
     <class="text-danger">
         O: <?= $tarifa1 ?> - não foi adicionado: <?= $msg ?>
         </p>
-        <?php
-    }
-        ?>\
+    <?php
+}
+    ?>

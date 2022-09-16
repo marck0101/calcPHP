@@ -1,0 +1,89 @@
+.flex-container {
+  color: aliceblue;
+  display: flex;
+  width: inherit;
+
+  /* flex-direction: row; */
+  /* flex-wrap: nowrap; */
+  justify-content: center;
+  align-items: stretch;
+}
+
+.borda {
+  /* height: 800px;
+  width: 800px; */
+  display: flex;
+  border: 2px solid;
+  margin: 15px;
+  padding: 15px;
+}
+
+.borda1 {
+  display: flex;
+  background-color: red;
+  width: 15%;
+}
+
+.borda2 {
+  display: flex;
+  background-color: blue;
+  width: 25%;
+}
+
+/* ---------------------------------------------- */
+
+/* .teste-mae {
+  display: flex;
+  background-color: green;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 50%;
+} */
+
+.teste-conteiner {
+  display: flex;
+  padding: 1%;
+  flex-wrap: wrap;
+  height: 90%;
+  /* width: 95%; */
+  border: 5px solid;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50%;
+  flex-direction: row;
+  /* align-content: stretch; */
+}
+
+.container-teste {
+  display: flex;
+  flex-wrap: wrap;
+  /* width: 15px; */
+}
+
+.teste-item1 {
+  display: flex;
+  background-color: red;
+  color: white;
+  padding: 30px;
+  align-content: stretch;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 10px;
+  /* width: 20%; */
+  /* justify-content: space-between; */
+  /* justify-content: center; */
+}
+.teste-item2 {
+  display: flex;
+  background-color: blue;
+  color: white;
+  padding: 30px;
+  align-content: stretch;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px;
+  /* justify-content: space-between; */
+  justify-content: center;
+
+  /* width: 20%; */
+}
