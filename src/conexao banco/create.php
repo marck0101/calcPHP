@@ -15,7 +15,7 @@ if (isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["phone"]))
     </div>
     <div class="row flex-center">
         <div class="form-div">
-            <form class="form" action="../../pages/user/create.php" method="POST">
+            <form class="form" action="../../src/actions/user/create.php" method="POST">
                 <label>Name</label>
                 <input type="text" name="name" required/>
                 <label>E-mail</label>

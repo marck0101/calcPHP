@@ -34,21 +34,18 @@ function getCEP() {
  * @param {*} telefoneContato 
  * @param {*} email 
  */
-function captApresenta(
-  cep,
-  localidade,
-  redeEletrica,
-  local,
-  contaMes,
-  // kwpConsumo,
-  nomeCompleto,
-  telefoneContato,
-  email
-) {
+
+var cepTeste;
+var localTeste;
+
+function captApresenta() {
+  cepTeste = document.getElementById("cep").value;
+ 
   var cep = document.getElementById("cep").value;
   // var localidade = document.getElementById("localidade").value;
   var redeEletrica = document.getElementById("redeEletrica").value; // como saber se é sim ou n o selecionado
-  var local = document.getElementById("local").value;
+  localTeste = document.getElementById("local").value;
+  local = document.getElementById("local").value;
   var contaMes = document.getElementById("contaMes").value;
   var tarifa = document.getElementById("tarifa").value;
   // var kwpConsumo = document.getElementById("kwpConsumo").value;
@@ -299,23 +296,55 @@ function maeFunction() {
   exibeGrid(cm, potenciaPico, areaSistema, geracaoMes, geracaoAno);
 }
 
+
 /**
  * Envia dados para o PHP
- * @var json Variável que armazena os dados para enviar para o arquivo php
- * @var xhttp Cria a instância para comunicar com o arquivo php
+ *  json Variável que armazena os dados para enviar para o arquivo php
+ *  xhttp Cria a instância para comunicar com o arquivo php
  */
+// function enviaRequest() {
+
+//   var xhttp = new XMLHttpRequest();
+//   xhttp.onreadystatechange = function() {
+//     if (this.readyState == 4 && this.status == 200) { //Verifica se comunicou com o php
+//       alert('Entrou na função enviaRequest()');
+//       console.log(this.responseText);
+//       alert(this.responseText); // é o que o arquivo php retornou de mensagem
+//      // document.getElementById("demo").innerHTML = this.responseText;
+//     }
+//   };
+//   xhttp.open("POST", "../src/js/arquivo.php?teste=1500", true); // Abre uma instância com o arquivo php
+//   //xhttp.open("POST", "../src/js/arquivo.php?cep=" + cep + "&localidade=" + localidade, true);
+//   xhttp.send(null);
+// }
+
+/** 
+ * exemplo vídeo aula 
+ * https://www.youtube.com/watch?v=bpx0r_PLLBo
+var xhr =new XMLHttpRequest();
+xhr.onreadystatechange = function(){
+  var documento;
+
+  if(xhr.readyState == 4 && xhr.status ==200){
+   documento = xhr.response;
+   documento = JSON.parse(documento)
+   console.log(documento);
+  }else{
+
+  }
+}
+
+xhr.open("GET", "" )
+
+xhr.send();
+
+*/
+
 function enviaRequest() {
 
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) { //Verifica se comunicou com o php
-      alert('Entrou na função enviaRequest()');
-      alert(this.responseText); // é o que o arquivo php retornou de mensagem
-     // document.getElementById("demo").innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("POST", "../src/js/arquivo.php?teste=1500", true); // Abre uma instância com o arquivo php
-  
-  //xhttp.open("POST", "../src/js/arquivo.php?cep=" + cep + "&localidade=" + localidade, true);
-  xhttp.send(null);
+var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
+var theUrl = "/calculadoraPHP/src/js/arquivo.php";
+xmlhttp.open("POST", theUrl);
+xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+xmlhttp.send(JSON.stringify({cep: cepTeste, local: localTeste }));
 }
