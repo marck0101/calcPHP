@@ -315,6 +315,7 @@ function enviaRequest() {
     }
   };
   xhttp.open("POST", "../src/js/arquivo.php?teste=1500", true); // Abre uma instância com o arquivo php
+  
   //xhttp.open("POST", "../src/js/arquivo.php?cep=" + cep + "&localidade=" + localidade, true);
   xhttp.send(null);
 }
