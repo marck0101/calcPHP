@@ -342,6 +342,28 @@ xhr.send();
 
 function enviaRequest() {
 
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) { //Verifica se comunicou com o php
+      alert('Entrou na função enviaRequest()');
+      alert(this.responseText); // é o que o arquivo php retornou de mensagem
+     // document.getElementById("demo").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("POST", "../src/js/arquivo.php?teste=1500", true); // Abre uma instância com o arquivo php
+  
+  //xhttp.open("POST", "../src/js/arquivo.php?cep=" + cep + "&localidade=" + localidade, true);
+  xhttp.send(null);
+}
+
+xhr.open("GET", "" )
+
+xhr.send();
+
+
+
+function enviaRequest() {
+
 var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
 var theUrl = "/calculadoraPHP/src/js/arquivo.php";
 xmlhttp.open("POST", theUrl);
