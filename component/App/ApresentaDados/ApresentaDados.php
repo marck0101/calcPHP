@@ -34,103 +34,64 @@ $tarifa1 = isset($_GET['tarifa1']) ? $_GET['tarifa1'] : null;
 <body>
     <div class="borda">
         <div class="container-teste">
-            <div class="teste-item1">
-                <?php
-                echo 'endereco =>' . $endereco;
-                ?>
-            </div>
 
             <div class="teste-item2">
-                <?php
-                echo '<br>';
-                echo 'cep =>' . $cep1;
-                ?>
+                <div class=".col-xs-4" style="display:flex; flex-direction: column; align-items: center;">
+                    <img src="../../icons/solar-panel.png" style="width: 50px " />
+                    <?php
+                    echo '<br>';
+                    echo "Consumo mensal médio considerado: =>"  . $cm . ' kWh';
+                    ?>
+                </div>
             </div>
 
             <div class="teste-item1">
-                <?php
-                echo '<br>';
-                echo 'contaMes =>' . $contaMes1;
-                ?>
+                <div class=".col-xs-4" style="display:flex; flex-direction: column; align-items: center;">
+                    <img src="../../icons/solar-panel.png" style="width: 50px " />
+                    <?php
+                    echo '<br>';
+                    echo "Potencia Pico: =>" . $potenciaPico . " kWp";
+                    ?>
+                </div>
             </div>
 
             <div class="teste-item2">
-                <?php
-                echo '<br>';
-                echo 'redeEletrica =>' . $redeEletrica1;
-                ?>
-            </div>
-
-            <div class="teste-item1">
-                <?php
-                echo '<br>';
-                echo 'indIrrad =>' . $indIrrad;
-                ?>
-            </div>
-
-            <div class="teste-item2">
-                <?php
-                echo '<br>';
-                echo 'cm =>' . $cm;
-                ?>
-            </div>
-
-            <div class="teste-item1">
-                <?php
-                echo '<br>';
-                echo 'potenciaPico =>' . $potenciaPico;
-                ?>
-            </div>
-
-            <div class="teste-item2">
-                <?php
-                echo '<br>';
-                echo 'areaSistema =>' . $areaSistema;
-                ?>
-            </div>
-
-            <div class="teste-item1">
-                <?php
-                echo '<br>';
-                echo 'geracaoAno =>' . $geracaoAno;
-                ?>
-            </div>
-
-            <div class="teste-item2">
-                <?php
-                echo '<br>';
-                echo 'geracaoMes =>' . $geracaoMes;
-                ?>
-            </div>
-
-            <div class="teste-item1">
-                <?php
-                echo '<br>';
-                echo 'nomeCompleto1 =>' . $nomeCompleto1;
-                ?>
-            </div>
-
-            <div class="teste-item2">
-                <?php
-                echo '<br>';
-                echo 'telefoneContato1 =>' . $telefoneContato1;
-                ?>
-            </div>
-
-            <div class="teste-item1">
-                <?php
-                echo '<br>';
-                echo 'email1 =>' . $email1;
-                ?>
-            </div>
-
-            <div class="teste-item2">
-                <?php
-                echo '<br>';
-                echo 'tarifa1 =>' . $tarifa1;
-                ?>
+                <div class=".col-xs-4" style="display:flex; flex-direction: column; align-items: center;">
+                    <img src="../../icons/solar-panel.png" style="width: 50px " />
+                    <?php
+                    echo '<br>';
+                    echo "Área estimada: =>"  . $areaSistema . " m²";
+                    ?>
+                </div>
             </div>
         </div>
+
+        <div class="container-teste">
+
+            <div class="teste-item1">
+                <div class=".col-xs-4" style="display:flex; flex-direction: column; align-items: center;">
+                    <img src="../../icons/solar-panel.png" style="width: 50px " />
+                    <?php
+                    echo '<br>';
+                    echo "Geração total ano: =>" . $geracaoAno . " kWp";
+                    ?>
+                </div>
+
+            </div>
+
+            <div class="teste-item2">
+                <div class=".col-xs-4" style="display:flex; flex-direction: column; align-items: center;">
+                    <img src="../../icons/solar-panel.png" style="width: 50px " />
+                    <?php
+                    echo '<br>';
+                    echo "Geração mensal média: =>" . $geracaoMes . " kWp";
+                    ?>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
     </div>
 
 </body>
