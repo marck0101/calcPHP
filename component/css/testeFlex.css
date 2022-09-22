@@ -80,10 +80,10 @@
   padding: 30px;
   align-content: stretch;
   flex-wrap: wrap;
-  align-items: center;
-  margin: 10px;
+  /* align-items: center; */
   /* justify-content: center; */
-  border: 5px solid;
+  margin: 10px;
+  border: 1px solid;
   border-radius: 20px;
 }
 
