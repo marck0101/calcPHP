@@ -195,7 +195,7 @@ if (insereCliente(
     $tarifa1
 )) {
 ?>
-    <p class=" text-success">
+    <!-- <p class=" text-success">
         O <?= $endereco ?> - adicionado com sucesso!
     </p>
     <p class=" text-success">
@@ -236,12 +236,12 @@ if (insereCliente(
     </p>
     <p class=" text-success">
         O <?= $tarifa1 ?> - adicionado com sucesso!
-    </p>
+    </p> -->
 
 <?php
 } else {
 ?>
-    <p class="text-danger">
+    <!-- <p class="text-danger">
         O <?= $endereco; ?> não foi adicionado: <?= $msg ?>
 
     <p class="text-danger">
@@ -286,7 +286,7 @@ if (insereCliente(
 
     <class="text-danger">
         O: <?= $tarifa1 ?> - não foi adicionado: <?= $msg ?>
-        </p>
-    <?php
+        </p> -->
+<?php
 }
-    ?>
+?>
