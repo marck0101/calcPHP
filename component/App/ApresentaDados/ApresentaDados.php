@@ -35,32 +35,37 @@ $tarifa1 = isset($_GET['tarifa1']) ? $_GET['tarifa1'] : null;
     <div class="borda">
         <div class="container-teste">
 
-            <div class="teste-item2">
-                <div class=".col-xs-4" style="display:flex; flex-direction: column; align-items: center;">
-                    <img src="../../icons/solar-panel.png" style="width: 50px " />
+            <div class="teste-item1">
+                <div class=".col-xs-4" style="display:flex; flex-direction: row; align-items: left;">
+                    <div style="margin-left: 2%;"><img src="../../icons/placa1.png" style="width: 50px " /></div>
+                    <div>
+                        <?php
+                        echo '<br>';
+                        echo "Consumo mensal médio considerado: " . $cm . ' kWh'
+                        ?>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="teste-item1">
+                <!-- <div class=".col-xs-4" style="display:flex; flex-direction: column; align-items: left;"> -->
+                <div class=".col-xs-4" style="display:flex; flex-direction: row; align-items: left;">
+                    <img src="../../icons/potency2.png" style="width: 50px " />
                     <?php
                     echo '<br>';
-                    echo "Consumo mensal médio considerado: =>"  . $cm . ' kWh';
+                    echo "Potencia Pico: " . $potenciaPico . " kWp";
                     ?>
                 </div>
             </div>
 
             <div class="teste-item1">
-                <div class=".col-xs-4" style="display:flex; flex-direction: column; align-items: center;">
-                    <img src="../../icons/solar-panel.png" style="width: 50px " />
+                <!-- <div class=".col-xs-4" style="display:flex; flex-direction: column; align-items: left;"> -->
+                <div class=".col-xs-4" style="display:flex; flex-direction: row; align-items: left;">
+                    <img src="../../icons/area2.png" style="width: 50px " />
                     <?php
                     echo '<br>';
-                    echo "Potencia Pico: =>" . $potenciaPico . " kWp";
-                    ?>
-                </div>
-            </div>
-
-            <div class="teste-item2">
-                <div class=".col-xs-4" style="display:flex; flex-direction: column; align-items: center;">
-                    <img src="../../icons/solar-panel.png" style="width: 50px " />
-                    <?php
-                    echo '<br>';
-                    echo "Área estimada: =>"  . $areaSistema . " m²";
+                    echo "Área estimada: "  . $areaSistema . " m²";
                     ?>
                 </div>
             </div>
@@ -69,22 +74,25 @@ $tarifa1 = isset($_GET['tarifa1']) ? $_GET['tarifa1'] : null;
         <div class="container-teste">
 
             <div class="teste-item1">
-                <div class=".col-xs-4" style="display:flex; flex-direction: column; align-items: center;">
-                    <img src="../../icons/solar-panel.png" style="width: 50px " />
+                <div class=".col-xs-4" style="display:flex; flex-direction: row; align-items: left;">
+                    <!-- <div class=".col-xs-4" style="display:flex; flex-direction: column; align-items: left;"> -->
+                    <img src="../../icons/time5.png" style="width: 50px " />
                     <?php
                     echo '<br>';
-                    echo "Geração total ano: =>" . $geracaoAno . " kWp";
+                    echo "Geração total ano: " . $geracaoAno . " kWp";
                     ?>
                 </div>
 
             </div>
 
-            <div class="teste-item2">
-                <div class=".col-xs-4" style="display:flex; flex-direction: column; align-items: center;">
-                    <img src="../../icons/solar-panel.png" style="width: 50px " />
+            <div class="teste-item1">
+                <!-- <div class=".col-xs-4" style="display:flex; flex-direction: column; align-items: left;"> -->
+                <div class=".col-xs-4" style="display:flex; flex-direction: row; align-items: left;">
+
+                    <img src="../../icons/time2.png" style="width: 50px " />
                     <?php
                     echo '<br>';
-                    echo "Geração mensal média: =>" . $geracaoMes . " kWp";
+                    echo "Geração mensal média: " . $geracaoMes . " kWp";
                     ?>
                 </div>
             </div>
