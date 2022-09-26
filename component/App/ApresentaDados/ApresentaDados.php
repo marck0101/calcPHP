@@ -33,6 +33,9 @@ $tarifa1 = isset($_GET['tarifa1']) ? $_GET['tarifa1'] : null;
 
 <body>
     <div class="borda">
+        <h3>Resultado da simulação:</h3>
+    </div>
+    <div class="borda">
         <div class="container-teste">
 
             <div class="teste-item1">
