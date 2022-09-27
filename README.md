@@ -18,3 +18,4 @@ Após fazer preencher todos os dados o usuário, cliente ou vendador, vai ser di
 
 Ao clicar no botão de "Simule agora" o sistema vai realizar várias funções além de mandar as informações para um banco de dados, o Mysql. 
 
+As telas foram criadas para ter um design responsivo e se ajustar em diplays de celulares, notebooks e desktops.
