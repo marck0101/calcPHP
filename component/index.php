@@ -9,8 +9,9 @@
     <script language="javascript" type="text/javaScript" src="./js/Testejson.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/meuCss.css">
     </link>
+    <link rel="icon" type="imagem/png" href="img/icon.svg" />
 
-    <title>Document</title>
+    <title>Fockink | Simulador de geração fotovoltaica</title>
 </head>
 
 <body>

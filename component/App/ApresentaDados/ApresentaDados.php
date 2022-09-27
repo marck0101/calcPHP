@@ -26,9 +26,10 @@ $tarifa1 = isset($_GET['tarifa1']) ? $_GET['tarifa1'] : null;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../css/meuCss.css">
     <link rel="stylesheet" type="text/css" href="../../css/testeFlex.css" />
-
     </link>
-    <title>Document</title>
+    <link rel="icon" type="imagem/png" href="img/icon.svg" />
+
+    <title>Fockink | Simulador de geração fotovoltaica</title>
 </head>
 
 <body>
