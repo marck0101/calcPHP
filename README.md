@@ -13,7 +13,7 @@ Clicando no menu "Calculadora Fotovoltaica" iniciar a simulação.
 
 
 Após fazer preencher todos os dados o usuário, cliente ou vendador, vai ser direcionado para outra página onde vai ver o resultado da simulação.
-## observação, simulação demonstrativa.
+## Observação: simulação ilustrativa.
 ![resultado](https://user-images.githubusercontent.com/102032089/192616619-eabff51f-0738-41c9-93c3-28d0dfb7b75b.jpeg)
 
 Ao clicar no botão de "Simule agora" o sistema vai realizar várias funções além de mandar as informações para um banco de dados, o Mysql. 
