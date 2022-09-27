@@ -1,0 +1,104 @@
+.flex-container {
+  color: aliceblue;
+  display: flex;
+  width: inherit;
+
+  /* flex-direction: row; */
+  /* flex-wrap: nowrap; */
+  justify-content: center;
+  align-items: stretch;
+}
+
+.borda {
+  /* height: 800px;
+  width: 800px; */
+  display: flex;
+  /* border: 2px solid; */
+  margin: 15px;
+  padding: 15px;
+}
+
+.borda1 {
+  display: flex;
+  background-color: red;
+  width: 15%;
+}
+
+.borda2 {
+  display: flex;
+  background-color: blue;
+  width: 25%;
+}
+
+/* ---------------------------------------------- */
+
+/* .teste-mae {
+  display: flex;
+  background-color: green;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 50%;
+} */
+
+.teste-conteiner {
+  display: flex;
+  padding: 1%;
+  flex-wrap: wrap;
+  height: 90%;
+  /* width: 95%; */
+  border: 5px solid;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50%;
+  flex-direction: row;
+  /* align-content: stretch; */
+}
+
+.container-teste {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  /* width: 15px; */
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+.container-teste2 {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  /* width: 15px; */
+  flex-direction: column;
+}
+
+.teste-item1 {
+  display: flex;
+  /* background-color: #009688; */
+  color: black;
+  padding: 30px;
+  align-content: stretch;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  /* justify-content: center; */
+  margin: 10px;
+  border: 1px solid;
+  border-radius: 20px;
+}
+
+.img {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+@media (max-width: 700px) {
+  .container-teste,
+  .borda {
+    /* background-color: aqua; */
+    /* estilo para mobile */
+    display: flex;
+    flex-direction: column;
+  }
+}
