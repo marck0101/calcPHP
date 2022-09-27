@@ -1,4 +1,5 @@
-# calcPHP 
+# Calculadora Fotovoltaica
+
 A calculadora PHP foi desenvolvida para facilitar um orçamento para um vendedor, ou se um cliente necessita realizar alguma simulação antes da contratação.
 
 Para poder usar a calculadora não é necessário fazer login, só acessar a página da [Fockink](https://www.fockink.ind.br).
