@@ -7,7 +7,7 @@ Como visitando ir até a aba equipamentos e acessar em "sistemas de geração fo
 ![image](https://user-images.githubusercontent.com/102032089/192615972-17632ab2-94c9-49e3-af14-194a74a12ab0.png)
 
 
-Clicando no menu iniciar a simulação.
+Clicando no menu "Calculadora Fotovoltaica" iniciar a simulação.
 
 ![formulario](https://user-images.githubusercontent.com/102032089/192616379-fb8dfeff-caba-4a71-b6c1-482404a38f62.jpeg)
 
