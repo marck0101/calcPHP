@@ -26,42 +26,61 @@ $tarifa1 = isset($_GET['tarifa1']) ? $_GET['tarifa1'] : null;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../css/meuCss.css">
     <link rel="stylesheet" type="text/css" href="../../css/testeFlex.css" />
-
     </link>
-    <title>Document</title>
+    <link rel="icon" type="imagem/png" href="img/icon.svg" />
+
+    <title>Fockink | Simulador de geração fotovoltaica</title>
 </head>
 
 <body>
     <div class="borda">
+        <h3>Resultado da simulação:</h3>
+    </div>
+    <div class="borda">
         <div class="container-teste">
 
-            <div class="teste-item2">
-                <div class=".col-xs-4" style="display:flex; flex-direction: column; align-items: center;">
-                    <img src="../../icons/solar-panel.png" style="width: 50px " />
-                    <?php
-                    echo '<br>';
-                    echo "Consumo mensal médio considerado: =>"  . $cm . ' kWh';
-                    ?>
+            <div class="teste-item1">
+                <div class=".col-xs-4" style="display:flex; flex-direction: row; align-items: left;">
+                    <div style="margin-right: 2%;">
+                        <img src="../../icons/placa1.png" style="width: 50px " />
+                    </div>
+                    <div style="margin-left: 2%;">
+                        <?php
+                        echo '<br>';
+                        echo "Consumo mensal médio considerado: " . $cm . 'kWh'
+                        ?>
+                    </div>
+
                 </div>
             </div>
 
             <div class="teste-item1">
-                <div class=".col-xs-4" style="display:flex; flex-direction: column; align-items: center;">
-                    <img src="../../icons/solar-panel.png" style="width: 50px " />
-                    <?php
-                    echo '<br>';
-                    echo "Potencia Pico: =>" . $potenciaPico . " kWp";
-                    ?>
+                <!-- <div class=".col-xs-4" style="display:flex; flex-direction: column; align-items: left;"> -->
+                <div class=".col-xs-4" style="display:flex; flex-direction: row; align-items: left;">
+                    <div style="margin-right: 2%;">
+                        <img src="../../icons/potency2.png" style="width: 50px " />
+                    </div>
+                    <div style="margin-left: 2%;">
+                        <?php
+                        echo '<br>';
+                        echo "Potencia Pico: " . $potenciaPico . "kWp";
+                        ?>
+                    </div>
                 </div>
             </div>
 
-            <div class="teste-item2">
-                <div class=".col-xs-4" style="display:flex; flex-direction: column; align-items: center;">
-                    <img src="../../icons/solar-panel.png" style="width: 50px " />
-                    <?php
-                    echo '<br>';
-                    echo "Área estimada: =>"  . $areaSistema . " m²";
-                    ?>
+            <div class="teste-item1">
+                <!-- <div class=".col-xs-4" style="display:flex; flex-direction: column; align-items: left;"> -->
+                <div class=".col-xs-4" style="display:flex; flex-direction: row; align-items: left;">
+                    <div style="margin-right: 2%;">
+                        <img src="../../icons/area2.png" style="width: 50px " />
+                    </div>
+                    <div style="margin-left: 2%;">
+                        <?php
+                        echo '<br>';
+                        echo "Área estimada: "  . $areaSistema . "m²";
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,24 +88,33 @@ $tarifa1 = isset($_GET['tarifa1']) ? $_GET['tarifa1'] : null;
         <div class="container-teste">
 
             <div class="teste-item1">
-                <div class=".col-xs-4" style="display:flex; flex-direction: column; align-items: center;">
-                    <img src="../../icons/solar-panel.png" style="width: 50px " />
-                    <?php
-                    echo '<br>';
-                    echo "Geração total ano: =>" . $geracaoAno . " kWp";
-                    ?>
+                <div class=".col-xs-4" style="display:flex; flex-direction: row; align-items: left;">
+                    <div style="margin-right: 2%;">
+                        <img src="../../icons/time5.png" style="width: 50px " />
+                    </div>
+                    <div style="margin-left: 2%;">
+                        <?php
+                        echo '<br>';
+                        echo "Geração total ano: " . $geracaoAno . "kWp";
+                        ?>
+                    </div>
                 </div>
-
             </div>
 
-            <div class="teste-item2">
-                <div class=".col-xs-4" style="display:flex; flex-direction: column; align-items: center;">
-                    <img src="../../icons/solar-panel.png" style="width: 50px " />
-                    <?php
-                    echo '<br>';
-                    echo "Geração mensal média: =>" . $geracaoMes . " kWp";
-                    ?>
+            <div class="teste-item1">
+                <!-- <div class=".col-xs-4" style="display:flex; flex-direction: column; align-items: left;"> -->
+                <div class=".col-xs-4" style="display:flex; flex-direction: row; align-items: left;">
+                    <div style="margin-right: 2%;">
+                        <img src="../../icons/time2.png" style="width: 50px " />
+                    </div>
+                    <div style="margin-left: 2%;">
+                        <?php
+                        echo '<br>';
+                        echo "Geração mensal média: " . $geracaoMes . "kWp";
+                        ?>
+                    </div>
                 </div>
+
             </div>
         </div>
 
@@ -171,7 +199,7 @@ if (insereCliente(
     $tarifa1
 )) {
 ?>
-    <p class=" text-success">
+    <!-- <p class=" text-success">
         O <?= $endereco ?> - adicionado com sucesso!
     </p>
     <p class=" text-success">
@@ -212,12 +240,12 @@ if (insereCliente(
     </p>
     <p class=" text-success">
         O <?= $tarifa1 ?> - adicionado com sucesso!
-    </p>
+    </p> -->
 
 <?php
 } else {
 ?>
-    <p class="text-danger">
+    <!-- <p class="text-danger">
         O <?= $endereco; ?> não foi adicionado: <?= $msg ?>
 
     <p class="text-danger">
@@ -262,7 +290,7 @@ if (insereCliente(
 
     <class="text-danger">
         O: <?= $tarifa1 ?> - não foi adicionado: <?= $msg ?>
-        </p>
-    <?php
+        </p> -->
+<?php
 }
-    ?>
+?>

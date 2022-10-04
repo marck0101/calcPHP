@@ -155,7 +155,27 @@
   border: 1px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #fefefa;
+  background-color: #fff;
+  margin-left: 200px;
+}
+
+@media (max-width: 1150px) {
+  .borda {
+    border: 1px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    margin-left: 15%;
+  }
+}
+@media (max-width: 799px) {
+  .borda {
+    border: 1px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    margin-left: 5%;
+  }
 }
 
 .borda2 {
@@ -2556,7 +2576,7 @@ pre code {
 
 .form-control {
   display: block;
-  width: 100%;
+  width: 75%;
   height: calc(1.5em + 0.75rem + 2px);
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
@@ -3798,7 +3818,7 @@ fieldset:disabled a.btn {
 
 .btn-block {
   display: block;
-  width: 100%;
+  width: 75%;
 }
 
 .btn-block + .btn-block {

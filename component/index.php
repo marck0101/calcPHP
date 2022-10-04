@@ -8,9 +8,10 @@
     <script language="javascript" type="text/javaScript" src="./js/calculos.js"></script>
     <script language="javascript" type="text/javaScript" src="./js/Testejson.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/meuCss.css">
-</link>
+    </link>
+    <link rel="icon" type="imagem/png" href="img/icon.svg" />
 
-    <title>Document</title>
+    <title>Fockink | Simulador de geração fotovoltaica</title>
 </head>
 
 <body>
@@ -25,9 +26,11 @@
                 <?php include("../component/App/conteudo/gastoMensal.php") ?>
                 <?php include("../component/App/conteudo/tarifa.php") ?>
                 <?php include("../component/App/conteudo/formContato.php") ?>
+                <div class="borda">
+                    <button class="btn btn-danger btn-lg btn-block" onclick="maeFunction() ">
+                        Simule Agora</button>
+                </div>
 
-                <button class="btn btn-danger btn-lg btn-block" onclick="maeFunction() ">
-                    Simule Agora</button>
             </table>
             <!-- </form> -->
         </div>
