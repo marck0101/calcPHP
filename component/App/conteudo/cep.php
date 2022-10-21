@@ -1,4 +1,5 @@
 <div class="borda">
+    <!-- faz a busca do CEP -->
     <div class="">
         <h5>1.Local da instalação</h5>
         <label>CEP:</label><br>
