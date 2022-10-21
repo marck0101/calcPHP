@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 21-Out-2022 às 21:08
+-- Tempo de geração: 21-Out-2022 às 21:34
 -- Versão do servidor: 10.4.25-MariaDB
 -- versão do PHP: 7.4.27
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `calculo`
+-- Banco de dados: `fockink`
 --
 
 -- --------------------------------------------------------
@@ -51,7 +51,8 @@ CREATE TABLE `formulario` (
 --
 
 INSERT INTO `formulario` (`id_cliente`, `endereco`, `indIrrad`, `cm`, `geracaoAno`, `nome`, `telefone`, `email`, `cep`, `geracaoMes`, `potencia_pico`, `area_estimada`, `tipo_instalacao`, `gasto_mensal`, `tarifa`, `dt_inclusao`) VALUES
-(1, 'Sertão', '4812', 59, '706', 'Iuri teste', '(55) 9000-0000', 'nome@email.com', 99170000, 58.82, 0, 5, 1, 50, '0.85', '2022-10-21 19:06:52');
+(1, 'Panambi', '4858', 13467, '161600', 'Nme e Sobrenome', '(55) 9000-0000', 'nome@email.com', 98280000, 13466.67, 110, 775, 1, 8888, '0.66', '2022-10-21 19:32:31'),
+(2, 'Panambi', '4858', 13467, '161600', 'Nme e Sobrenome', '(55) 9000-0000', 'nome@email.com', 98280000, 13466.67, 110, 775, 1, 8888, '0.66', '2022-10-21 19:32:50');
 
 --
 -- Índices para tabelas despejadas
@@ -71,7 +72,7 @@ ALTER TABLE `formulario`
 -- AUTO_INCREMENT de tabela `formulario`
 --
 ALTER TABLE `formulario`
-  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
