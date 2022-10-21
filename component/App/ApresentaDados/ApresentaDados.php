@@ -179,7 +179,15 @@ function insereCliente(
     return $resultadoDaInsercao;
 }
 
-$conexao = mysqli_connect('localhost', 'root', '', 'calculo');
+// $conexao = mysqli_connect('localhost', 'root', '', 'calculo');
+// passa o local onde está o banco, passa o 
+// '127.0.0.1', passa o local onde está o banco, passa o 
+// 'fockink', 
+// 'w_BJODXqWOOnXI2=?1', 
+// 'fockink'
+
+//                           link       user        senha                   bd
+$conexao = mysqli_connect('127.0.0.1', 'fockink', 'w_BJODXqWOOnXI2=?1', 'fockink');
 
 if (insereCliente(
     $conexao,
