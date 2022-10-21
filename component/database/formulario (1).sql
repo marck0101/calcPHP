@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 22-Set-2022 às 18:31
--- Versão do servidor: 10.4.22-MariaDB
--- versão do PHP: 8.1.2
+-- Tempo de geração: 21-Out-2022 às 21:08
+-- Versão do servidor: 10.4.25-MariaDB
+-- versão do PHP: 7.4.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `calc`
+-- Banco de dados: `calculo`
 --
 
 -- --------------------------------------------------------
@@ -28,9 +28,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `formulario` (
-  `id_cliente` int(11) PRIMARY KEY AUTO_INCREMENT,
+  `id_cliente` int(11) NOT NULL,
   `endereco` varchar(50) NOT NULL,
-  `contaMes` int(11) NOT NULL,
   `indIrrad` decimal(10,0) NOT NULL,
   `cm` int(15) NOT NULL,
   `geracaoAno` decimal(10,0) NOT NULL,
@@ -39,23 +38,20 @@ CREATE TABLE `formulario` (
   `email` varchar(50) DEFAULT NULL,
   `cep` int(8) DEFAULT NULL,
   `geracaoMes` double NOT NULL,
-  `consumo_mensal_medio` float DEFAULT NULL,
   `potencia_pico` int(11) DEFAULT NULL,
   `area_estimada` int(11) DEFAULT NULL,
-  `geracao_mensal_media` int(11) DEFAULT NULL,
-  `geracao_total_media` int(11) DEFAULT NULL,
   `tipo_instalacao` int(11) DEFAULT NULL,
   `gasto_mensal` int(11) DEFAULT NULL,
-  `tarifa` double(11,3) DEFAULT NULL,
-  `geracaoMensal` decimal(10,0) NOT NULL
+  `tarifa` decimal(3,2) DEFAULT NULL,
+  `dt_inclusao` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `formulario`
 --
 
-INSERT INTO `formulario` (`id_cliente`, `endereco`, `contaMes`, `indIrrad`, `cm`, `geracaoAno`, `nome`, `telefone`, `email`, `cep`, `geracaoMes`, `consumo_mensal_medio`, `potencia_pico`, `area_estimada`, `geracao_mensal_media`, `geracao_total_media`, `tipo_instalacao`, `gasto_mensal`, `tarifa`, `geracaoMensal`) VALUES
-(1, 'Santo Cristo', 0, '0', 0, '0', NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0'),
+INSERT INTO `formulario` (`id_cliente`, `endereco`, `indIrrad`, `cm`, `geracaoAno`, `nome`, `telefone`, `email`, `cep`, `geracaoMes`, `potencia_pico`, `area_estimada`, `tipo_instalacao`, `gasto_mensal`, `tarifa`, `dt_inclusao`) VALUES
+(1, 'Sertão', '4812', 59, '706', 'Iuri teste', '(55) 9000-0000', 'nome@email.com', 99170000, 58.82, 0, 5, 1, 50, '0.85', '2022-10-21 19:06:52');
 
 --
 -- Índices para tabelas despejadas
@@ -75,7 +71,7 @@ ALTER TABLE `formulario`
 -- AUTO_INCREMENT de tabela `formulario`
 --
 ALTER TABLE `formulario`
-  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=176;
+  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

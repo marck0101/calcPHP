@@ -142,7 +142,7 @@ function insereCliente(
     $nomeCompleto1,
     $telefoneContato1,
     $email1,
-    $tarifa1,
+    $tarifa1
 ) {
     $query = "INSERT INTO formulario (
     endereco, 
@@ -179,7 +179,7 @@ function insereCliente(
     return $resultadoDaInsercao;
 }
 
-$conexao = mysqli_connect('localhost', 'root', '', 'calc');
+$conexao = mysqli_connect('localhost', 'root', '', 'calculo');
 
 if (insereCliente(
     $conexao,
