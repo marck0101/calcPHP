@@ -142,7 +142,7 @@ function insereCliente(
     $nomeCompleto1,
     $telefoneContato1,
     $email1,
-    $tarifa1,
+    $tarifa1
 ) {
     $query = "INSERT INTO formulario (
     endereco, 
