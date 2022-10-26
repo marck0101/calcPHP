@@ -142,7 +142,7 @@ function insereCliente(
     $nomeCompleto1,
     $telefoneContato1,
     $email1,
-    $tarifa1,
+    $tarifa1
 ) {
     $query = "INSERT INTO formulario (
     endereco, 
@@ -247,47 +247,36 @@ if (insereCliente(
 ?>
     <!-- <p class="text-danger">
         O <?= $endereco; ?> não foi adicionado: <?= $msg ?>
-
     <p class="text-danger">
         O: <?= $cep1 ?> - não foi adicionado: <?= $msg ?>
     </p>
-
     <p class="text-danger">
         O: <?= $contaMes1 ?> - não foi adicionado: <?= $msg ?>
     </p>
-
     <p class="text-danger">
         O: <?= $cm ?> - não foi adicionado: <?= $msg ?>
     </p>
-
     <p class="text-danger">
         O: <?= $potenciaPico ?> - não foi adicionado: <?= $msg ?>
     </p>
-
     <p class="text-danger">
         O: <?= $areaSistema ?> - não foi adicionado: <?= $msg ?>
     </p>
-
     <p class="text-danger">
         O: <?= $geracaoAno ?> - não foi adicionado: <?= $msg ?>
     </p>
-
     <p class="text-danger">
         O: <?= $geracaoMes ?> - não foi adicionado: <?= $msg ?>
     </p>
-
     <p class="text-danger">
         O: <?= $nomeCompleto1 ?> - não foi adicionado: <?= $msg ?>
     </p>
-
     <p class="text-danger">
         O: <?= $telefoneContato1 ?> - não foi adicionado: <?= $msg ?>
     </p>
-
     <p class="text-danger">
         O: <?= $email1 ?> - não foi adicionado: <?= $msg ?>
     </p>
-
     <class="text-danger">
         O: <?= $tarifa1 ?> - não foi adicionado: <?= $msg ?>
         </p> -->
