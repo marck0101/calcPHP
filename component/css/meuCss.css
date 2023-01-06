@@ -159,6 +159,14 @@
   margin-left: 200px;
 }
 
+.bordaII {
+  border: 1px;
+  /* margin: 20px auto; */
+  padding: 10px;
+  background-color: #fff;
+  margin-left: 200px;
+}
+
 @media (max-width: 1150px) {
   .borda {
     border: 1px;

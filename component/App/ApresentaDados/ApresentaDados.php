@@ -188,6 +188,7 @@ function insereCliente(
 
 //                           link       user        senha                   bd
 $conexao = mysqli_connect('127.0.0.1', 'fockink', 'w_BJODXqWOOnXI2=?1', 'fockink');
+// $conexao = mysqli_connect('127.0.0.1', '', '', 'calculo2');
 
 if (insereCliente(
     $conexao,
